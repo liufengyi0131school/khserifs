@@ -17,3 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
       - run: pip install pyinstaller
       - run: pyinstaller DRS.py --onefile --windowed
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: DRS_build
+          path: dist/
