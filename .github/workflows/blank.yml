@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
       - run: pip install pyinstaller
-      - run: pyinstaller DRS.py --onefile --windowed
+      - run: pyinstaller DRS.py --onefile
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
